@@ -1,17 +1,19 @@
 # Frise Numérique
+![13 et 14](https://github.com/7clem/friseNumerique/blob/master/13-14.png)
 
 ## Description
 Une frise numérique comportant 
-  - l'écriture en chiffres des nombres,
-  - et l'écriture en lettres des nombres,
-  - chaque nombre de 0 à 100, zéro et cent sont inclus.
-  - les nombres premiers qui n'apparaissent dans aucune table de multiplication intéressante,
-  - les nombres composés qui apparaissent dans une table de multiplication,
-  - les nombres triangulaires.
+- l'écriture en chiffres des nombres,
+- et l'écriture en lettres des nombres,
+- une représentation analogique décimale 
+- chaque nombre de 0 à 100, zéro et cent sont inclus.
+- les nombres premiers qui n'apparaissent dans aucune table de multiplication intéressante,
+- les nombres composés qui apparaissent dans une table de multiplication,
+ - les nombres triangulaires.
 
- ## Objectif
- Stimuler les élèves avec ces nombres qui n'apparaisent pas dans les tables de multiplications.
- Mettre en évidence 'la forme' des nombres, composés toujours rectangles, les nombres triangulaires, les carrés et les nombres premiers qui ne    peuvent pas rentrer dans un boite, quoi qu'on fasse !
+## Objectif
+Offrir aux élèves une frise de classe enrichie par des aspects attrayants des nombres.
+Mettre en évidence 'la forme' des nombres, les nombres composés, biens rangés en rectangles, les nombres triangulaires, les carrés et les nombres premiers qui ne peuvent rentrer que dans des boites de 1 de large ou ne pas complètement remplir une boite rectangulaire, quoi qu'on fasse ! 
 
  ## Prolongement
  Faire travailler les élèves avec le matériel pédagogique habituel de numération et tenter de reproduire les empilements et tenter de trouver d'autres dimensions aux rectangles qui représentent les nombres composés.
@@ -26,8 +28,9 @@ Les tables de multiplications pourront être utilisées comme ressource pour vé
 
  ## Présentation
  Le document est constitué de 12 pages A3 de 8 cartes chaque, faciles à couper en bandes de 42 cm pour réaliser une frise à afficher en classe.
+ [Frise complète en PDF] (https://github.com/7clem/friseNumerique/blob/master/friseNumérique.pdf)
 
- ## Mise en œeuvre
+ ## Modification du fichier SVG brut
  Ouvrez [le fichier index.html](http://htmlpreview.github.io/?https://github.com/7clem/friseNumerique/blob/master/index.html)
 
 * Une fois l'image affichée, une copie au format SVG est téléchargée votre dossier téléchargement.
