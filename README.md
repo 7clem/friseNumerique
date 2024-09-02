@@ -11,7 +11,18 @@ Une frise numérique comportant
 
  ## Objectif
  Stimuler les élèves avec ces nombres qui n'apparaisent pas dans les tables de multiplications.
- Mettre en évidence 'la forme' des nombres, composés toujours rectangles, les nombres triangulaires et les carrés.
+ Mettre en évidence 'la forme' des nombres, composés toujours rectangles, les nombres triangulaires, les carrés et les nombres premiers qui ne    peuvent pas rentrer dans un boite, quoi qu'on fasse !
+
+ ## Prolongement
+ Faire travailler les élèves avec le matériel pédagogique habituel de numération et tenter de reproduire les empilements et tenter de trouver d'autres dimensions aux rectangles qui représentent les nombres composés.
+ ### Par exemple 24 : 
+ * = 20 + 4
+ * = 5 * 4 + 4
+ * = 6 * 4
+ * = (2 * 3) * 4  // ici plusieurs empilements en 3D sont possibles 
+ * = 8 * 3
+ * = 4 * 6
+Les tables de multiplications pourront être utilisées comme ressource pour vérifier si on trouve bien le produit où on l'attend.
 
  ## Présentation
  Le document est constitué de 12 pages A3 de 8 cartes chaque, faciles à couper en bandes de 42 cm pour réaliser une frise à afficher en classe.
