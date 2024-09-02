@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<META CHARSET="UTF-8">
+	<title>Frise svg</title>
+	<script src="page.js"> </script>
+	<script src="card.js"> </script>
+	<script src="cardinal.js"></script>
+	<script src="svg_utils.js"></script>
+	<script src="clump.js"></script>
+	<script src="number_class.js"></script>
+</head>
+<body>
+	<div id="svg" style="display:inline">
+		<svg
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="dessin.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.668"
+     inkscape:cx="760"
+     inkscape:cy="569"
+     inkscape:window-width="1472"
+     inkscape:window-height="1212"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" >
+	 </sodipodi:namedview>
+  <defs id="defs1">
+   </defs>
+	<style type="text/css">
+		svg {
+	color: #000;
+	fill: none;
+	stroke-width: 1px;
+	stroke: #00F;
+}
+
+.card {
+	fill: none;
+	stroke: #000;
+	stroke-width: 0.1;
+}
+.card > rect {
+	/* display: none; */
+}
+
+.coupe {
+	fill: none;
+	stroke: #00F;
+	stroke-width: 0.1;
+}
+
+text {
+	text-anchor: middle;
+	dominant-baseline: middle;
+	fill: #000;
+}
+
+
+.number text {
+	font-family: Serif, Times, Times-New-Roman;
+	fill: #000;
+	font-weight: Bold;
+	font-size: 12px;
+}
+
+.letter rect {
+	stroke: #000;
+}
+
+.letter text {
+	font-size: 60%;
+}
+
+#c1, #r1 {
+	fill: #555;
+	stroke: #FFF;
+	stroke-width: 2;
+}
+
+#u1 {
+	fill: #aaa;
+	stroke: #ddd;
+	stroke-width: 0.4;
+	stroke-dasharray: none;
+}
+
+.decimal rect {
+	stroke-width: 0.4;
+	stroke: #555;
+	stroke-dasharray: 1 2;
+}
+
+.productText {
+	fill: #bbb;
+	fill-opacity: 20%;
+	stroke: #000;
+	stroke-width: 0.8;
+	alignment-baseline: middle;
+	text-align: center;
+	font-size: 120%;
+}
+	</style>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1" >
+     </g>
+</svg>
+	</div>
+	
+<script>
+	"use strict"
+	let n = 0;
+	let svg = document.getElementById('svg1');
+	addSymbolsToDefs(svg);
+
+	const layer1 = document.getElementById('layer1');
+	
+	const params = new URLSearchParams(window.location.search);
+	if (params.has('n')) {
+		n = parseInt(params.get('n'), 10); // Gets the value of the "n" parameter
+		card(layer1, n);
+		throw new Error("Une seule carte est générée lorsque l'URL est de la forme index.html?n=12");
+	}
+
+	allPages(layer1);
+
+	const svgContent = document.getElementById('svg').innerHTML;
+
+	// Create a Blob from the SVG content
+	const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+
+	// Create a link element
+	const link = document.createElement('a');
+	link.href = URL.createObjectURL(blob);
+	link.download = 'frise.svg';
+
+	// Append the link to the document body (required for Firefox)
+	document.body.appendChild(link);
+
+	// Trigger the download by clicking the link
+	link.click();
+
+	document.body.removeChild(link);
+</script>
+</body>
+</html>
