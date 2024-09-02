@@ -13,17 +13,21 @@ Une frise numérique comportant
  Stimuler les élèves avec ces nombres qui n'apparaisent pas dans les tables de multiplications.
  Mettre en évidence 'la forme' des nombres, composés toujours rectangles, les nombres triangulaires et les carrés.
 
- ## Utilisation
- Le document est constitué de 13 pages A3 de 8 cartes chaque, faciles à couper en bandes de 42 cm pour réaliser une frise à afficher en classe.
+ ## Présentation
+ Le document est constitué de 12 pages A3 de 8 cartes chaque, faciles à couper en bandes de 42 cm pour réaliser une frise à afficher en classe.
 
- ## Installation 
-index.html, s'il est accompagné des fichiers ****.js dans le meme dossier produira un fichier SVG.
+ ## Mise en œeuvre
+ Ouvrez [le fichier index.html](http://htmlpreview.github.io/?https://github.com/7clem/friseNumerique/blob/master/index.html)
 
-Le fichier SVG produit n'est pas utilisable immédiatement. Il doit être ouvert dans Inkscape 1.3 (Logiciel gratuit disponible à [https://inkscape.org](https://inkscape.org). Dans Inkscape, il faut : 
-  - changer la hauteur de la première page et la fixer à 297. (bug à corriger)
-  - à la main, mettre à l'échelle et déplacer, voire tourner les groupes de pieces carrées trop grands pour qu'ils rentrent dans leur carte.
-  - des attributs de classe sont appliqués à chaque type d'objet et leur style peut être modifié de façon groupée avec l'éditeur de style de inkscape.
+* Une fois l'image affichée, une copie au format SVG est téléchargée votre dossier téléchargement.
+* Ce fichier n'est pas utilisable directement (pour l'instant).
+* Avec Inkscape 1.3 (Logiciel de référence du format SVG, gratuit et disponible à [https://inkscape.org](https://inkscape.org)
+* Il doit être ouvert et modifié : 
+  * Avec l' "outil Pages", changer la hauteur de la première page et la fixer à 297.  (bug à corriger)
+  * à la main, mettre à l'échelle et déplacer, voire tourner les groupes de pieces carrées, à partir de 51, trop grands pour qu'ils rentrent dans leur carte.
+  * des attributs de classe sont appliqués à chaque type d'objet et leur style peut être modifié de façon groupée avec l'éditeur de style de inkscape. pour ceux qui veulent utiliser les feuilles de style CSS.
     
 [l'utilisation de ce code est soumis à cette licence](LICENCE)
 
 ## Vos corrections ou idées sont bienvenues.
+7clement à gougle mel
