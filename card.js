@@ -4,7 +4,7 @@
  * 
  */
 
-const CARD = {width:100, height:138};
+const CARD = {width:100, height:138.5};
 const CARD_NUMBER = {x:0, y:CARD.height - 20, width:20, height:20};
 const CARD_LETTER = {x:20, y:CARD.height - 20, width:80, height:20};
 
@@ -12,7 +12,7 @@ const CARD_LETTER = {x:20, y:CARD.height - 20, width:80, height:20};
 function number(svg, n){
 	const g = svgElem('g');
 	svg.appendChild(g);
-	g.setAttribute('class', 'number');
+	g.setAttribute('class', 'number noto-sans-bold900');
 	
 	const r = svgElem('rect');
 	r.setAttribute('width', CARD_NUMBER.width);
@@ -80,16 +80,17 @@ function card(svg, n) {
 	r.setAttribute('width', CARD.width);
 	r.setAttribute('height', CARD.height);
 	_card.appendChild(r);
-	
+
+	// decimal repr
+	let dd = decimal(_card, n);
+	dd.setAttribute('transform', `translate(${0.5} ${CARD.height - CARD_NUMBER.height + 0.5}) scale(0.95) `);
+
 	// number in figures
 	number(_card, n);
 	
 	// number in words
 	letter(_card, n);
 
-	// decimal repr
-	let dd = decimal(_card, n);
-	dd.setAttribute('transform', `translate(${0.5} ${CARD.height - 39.5}) scale(0.95) `);
 
 	if (n > 0) {
 		clump(_card, n);

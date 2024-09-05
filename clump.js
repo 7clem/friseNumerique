@@ -53,9 +53,9 @@ function rectClump(svg, n) {
 	g.setAttribute('class', 'rectClump');
 	[a, b] = grid_size(n);
 	for (ix = 0 ; ix < a ; ix++) {
-		x = 10 * ix;
+		let x = 10 * ix;
 		for (iy = 0 ; iy < b ; iy++) {
-			y = 10 * iy;
+			let y = 10 * iy;
 			const u = svgElem('use');
 			u.setAttribute('href', '#r1');
 			u.setAttribute('x', x);
@@ -69,10 +69,20 @@ function rectClump(svg, n) {
 		}
 	}
 	scaleAndCenterInnerBox(svg, g);
+	const bbcr = g.getBoundingClientRect();
+	const bb = g.getBBox();
+	r = svgElem('rect');
+	r.setAttribute('x', `${bb.x}`);
+	r.setAttribute('y', `${bb.y}`)
+	r.setAttribute('width', `${bb.width}`)
+	r.setAttribute('height', `${bb.x}`)
+	g.appendChild(r);
+	let y = 54;
 	
 	const t = productText(a, b);
 	t.setAttribute('x', `50`);
-	t.setAttribute('y', `67`);
+	t.setAttribute('y', `${y}`);
+	t.setAttribute('class', 'productText noto-sans-bold900');
 	svg.appendChild(t);
 	
 	return g;
@@ -91,7 +101,7 @@ function primeClump(svg, n) {
 		for (iy = 0 ; iy < b ; iy++) {
 			y = 10 * iy;
 			const u = svgElem('use');
-			u.setAttribute('href', '#c1');
+			u.setAttribute('href', '#r1');
 			u.setAttribute('x', x);
 			u.setAttribute('y', y);
 			g.appendChild(u);
@@ -141,12 +151,12 @@ function triangleClump(svg, n) {
 
 
 function scaleAndCenterInnerBox(outer, inner){
-	const ob = outer.getBBox();
+	const ob = CARD;
 	const ib = inner.getBBox();
-	const MARGIN = 10;
-	const scaleX = (ob.width - MARGIN) / ib.width;
-	const scaleY = (ob.height - MARGIN) / ib.height;
-	const scale = Math.min(scaleX, scaleY) / 2;
+	const MARGIN = 0;
+	const scaleX = (ob.width) / (ib.width + MARGIN);
+	const scaleY = (ob.height) / (ib.height + MARGIN);
+	const scale = Math.min(scaleX, scaleY) / 1.3;
 	const offsetX = ob.width / 2 - ib.width * scale / 2;
 	const offsetY = (ob.height - CARD_NUMBER.height) / 2 - ib.height * scale / 2 ;
 	inner.setAttribute('transform',`translate(${offsetX}, ${offsetY}) scale(${scale}) `);
