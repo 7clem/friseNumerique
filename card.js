@@ -12,7 +12,7 @@ const CARD_LETTER = {x:20, y:CARD.height - 20, width:80, height:20};
 function number(svg, n){
 	const g = svgElem('g');
 	svg.appendChild(g);
-	g.setAttribute('class', 'number noto-sans-bold900');
+	g.setAttribute('class', 'number');
 	
 	const r = svgElem('rect');
 	r.setAttribute('width', CARD_NUMBER.width);

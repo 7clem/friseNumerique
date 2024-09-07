@@ -82,7 +82,7 @@ function rectClump(svg, n) {
 	const t = productText(a, b);
 	t.setAttribute('x', `50`);
 	t.setAttribute('y', `${y}`);
-	t.setAttribute('class', 'productText noto-sans-bold900');
+	t.setAttribute('class', 'productText bold900');
 	svg.appendChild(t);
 	
 	return g;
